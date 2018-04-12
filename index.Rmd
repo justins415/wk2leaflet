@@ -1,0 +1,19 @@
+---
+title: "week 2 Assignment"
+date: "April 12, 2018"
+output: html_document
+---
+Belo Horizonte, Brazil
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+
+```{r z1}
+
+library(leaflet)
+latLong <- data.frame(lat = c(-19.786166, -19.784026), lng = c(-43.878152, -43.877787))
+latLong %>% leaflet() %>% addTiles() %>% setView(-43.877787, -19.785166, zoom = 15) %>% addMarkers (popup = c("Escapamento Vila Olga Muffler Shop", "Loren's Moda Intima Lingerie Shop"))
+```
+
